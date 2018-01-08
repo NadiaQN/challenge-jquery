@@ -4,6 +4,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
   printNews();
+  renderActivities(activities);
 });
  // Definiendo funcion printNews
     function printNews () {
@@ -19,7 +20,7 @@ function renderHighlightedRecipes(recipesArray) {
       renderRecipe(recipesArray[i])
     }
   }
-	console.log('Recipes: ', recipesArray);
+	//console.log('Recipes: ', recipesArray);
 }
 
 /*
@@ -33,7 +34,7 @@ function renderRecipe(recipe) {
   var name = recipe.source.name;
   var url = recipe.source.url;
   $('.list-recipes').append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe>"'+ title +'</span><span class="metadara-recipe"><span class="author-recipe">' + name + '</span><span class="bookmarks-recipe"><span class="icon-bookmark"></span></span></span></span><img src="' + url + '"/></a>');
-	console.log('Voy a pintar la receta: ', recipe);
+	//console.log('Voy a pintar la receta: ', recipe);
 }
 
 
@@ -41,8 +42,14 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+function renderActivities(activities) {
+  for(i = 0; i<activities.length; i++){
+    if(activities.length > 0){
+      $('.wrapper-message').hide();
+    }
+    renderActivity(activities[i]);
+  }
+	console.log('Activities: ', activities);
 }
 
 /*
