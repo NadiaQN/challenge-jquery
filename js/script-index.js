@@ -58,12 +58,6 @@ function renderActivities(activities) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	var userImg = recipe.userAvatar;
-  var author = recipe.userName;
-  var recipeName = recipe.recipeName;
-  var txtRecipe = recipe.text;
-  var place = recipe.place;
-  var imgRecipe = recipe.image;
     $('.list-activities').append("<a href='#' class='item-activity'>"+
   "<span class='attribution'>"+
   "<span class='avatar'>"+
