@@ -29,6 +29,10 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
+  var title = recipe.title;
+  var name = recipe.source.name;
+  var url = recipe.source.url;
+  $('.list-recipes').append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe>"'+ title +'</span><span class="metadara-recipe"><span class="author-recipe">' + name + '</span><span class="bookmarks-recipe"><span class="icon-bookmark"></span></span></span></span><img src="' + url + '"/></a>');
 	console.log('Voy a pintar la receta: ', recipe);
 }
 
