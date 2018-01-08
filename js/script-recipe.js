@@ -13,3 +13,7 @@ $(document).ready( function(){
     $('.js-show-make').addClass('active');
     $('.js-show-recipe').removeClass('active');
   })
+
+  $('.js-back').click(function(){
+     $(this).attr('href','index.html');
+  });
